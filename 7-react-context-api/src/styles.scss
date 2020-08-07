@@ -1,0 +1,57 @@
+.app {
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+
+  &__title {
+    font-size: 50px;
+    text-align: center;
+    color: #0176fe;
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 400px;
+    height: 350px;
+    padding-top: 20px;
+    margin: 20px auto 0;
+
+    &--light {
+      background-color: #99ffff;
+    }
+
+    &--dark {
+      background-color: #1a1a1a;
+    }
+  }
+
+  &__ball {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 20px auto 0;
+
+    &--light {
+      background-color: yellow;
+    }
+
+    &--dark {
+      background-color: lightgray;
+    }
+  }
+
+  &__btn {
+    border-radius: 15px;
+    margin-top: 150px;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    outline: none;
+    
+    &:hover {
+      background-color: #f2f2f2;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px grey;
+    }
+  }
+}
+

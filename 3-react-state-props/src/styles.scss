@@ -1,0 +1,32 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+
+  &__title {
+    font-size: 50px;
+    text-align: center;
+    color: #0176fe;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 40px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  &__number {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  &__btn {
+    min-width: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+  }
+}

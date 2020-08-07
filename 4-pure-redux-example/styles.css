@@ -1,0 +1,39 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter__title {
+  font-size: 50px;
+  text-align: center;
+  color: #0176fe;
+  margin-bottom: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.counter__text {
+  font-size: 40px;
+  text-align: center;
+}
+
+.counter__number {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.counter__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter__btn {
+  width: 100px;
+  height: 50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.counter__btn:first-child {
+  margin-right: 5px;
+}
