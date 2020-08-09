@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Button from "./Button";
+import ButtonsWrapper from "./ButtonsWrapper";
 import CounterValue from "./CounterValue";
 
 export default class Counter extends Component {
@@ -21,8 +21,7 @@ export default class Counter extends Component {
       <div className="counter">
         <h1 className="counter__title">React local state + props</h1>
         <CounterValue value={counter} />
-        <Button onClick={() => increment()}>+</Button>
-        <Button onClick={() => resetCounter()}>Сбросить счетчик</Button>
+        <ButtonsWrapper onIncrement={increment} onReset={resetCounter} />
       </div>
     );
   }

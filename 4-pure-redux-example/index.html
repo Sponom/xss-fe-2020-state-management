@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <title>Redux basic example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
   </head>
@@ -20,8 +21,10 @@
     </div>
 
     <script>
+      
+      // функция-редюсер
       function counter(state, action) {
-        if (typeof state === "undefined") {
+        if (typeof state === 'undefined') {
           return 0;
         }
 
@@ -31,14 +34,17 @@
         }
       }
 
-      var store = Redux.createStore(counter);
-      var valueEl = document.getElementById("value");
+      // Создание хринилища
+      const store = Redux.createStore(counter);
+      const valueEl = document.getElementById('value');
 
       function render() {
         valueEl.innerHTML = store.getState().toString();
       }
 
       render();
+
+      // Добавление в подписчики функции render
       store.subscribe(render);
 
     </script>
