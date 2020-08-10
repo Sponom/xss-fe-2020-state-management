@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { incrementAction, increment } from "../reducers/index";
+import { incrementAction, increment, fetcheExampleData } from "../reducers/index";
 
-const Counter = ({ counter, increment }) => {
+const Counter = ({ counter, data, loading, increment, getData }) => {
+  useEffect(() => {
+    getData();
+  }, [getData]);
+  
   return (
     <div className="counter">
       <h1 className="counter__title">
@@ -16,21 +20,27 @@ const Counter = ({ counter, increment }) => {
           +
         </button>
       </div>
+      <br/>
+
+      <code>{loading ? 'Loading...' : JSON.stringify(data)}</code>
     </div>
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ counter, data, loading }) => {
   return {
-    counter: state.counter
+    counter,
+    data,
+    loading
   };
 };
 
-// const mapDispatchToProps = { increment };
+// const mapDispatchToProps = { increment, fetchData };
 
 const mapDispatchToProps = dispatch => {
   return {
-    increment: () => dispatch(incrementAction)
+    increment: () => dispatch(incrementAction),
+    getData: () => dispatch(fetcheExampleData())
   };
 };
 

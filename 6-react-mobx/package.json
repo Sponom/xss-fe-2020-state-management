@@ -1,27 +1,31 @@
 {
-  "name": "react",
+  "name": "react-mobx-example",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "React mobx example",
   "main": "src/index.js",
-  "dependencies": {
-    "mobx": "5.15.4",
-    "mobx-react": "6.2.3",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-scripts": "3.0.1"
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode development"
   },
   "devDependencies": {
-    "typescript": "3.8.3"
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "dependencies": {
+    "mobx": "^5.15.2",
+    "mobx-react": "^6.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "browserslist": [
     ">0.2%",
