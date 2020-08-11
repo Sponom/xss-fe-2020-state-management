@@ -23,7 +23,7 @@
     <script>
       
       // функция-редюсер
-      function counter(state, action) {
+      function reducer(state, action) {
         if (typeof state === 'undefined') {
           return 0;
         }
@@ -35,7 +35,7 @@
       }
 
       // Создание хринилища
-      const store = Redux.createStore(counter);
+      const store = Redux.createStore(reducer);
       const valueEl = document.getElementById('value');
 
       function render() {
